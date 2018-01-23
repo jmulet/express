@@ -18,6 +18,16 @@ app.get('/', function (req, res) {
 
 app.listen(3000)
 ```
+## Changes
+
+This distribution has minimal changes respect to the original one. I have added support for EJSON (extended json) which can be set through
+
+```js
+const EJSON = require('ejson');
+app.set("json serializer", EJSON);
+```
+
+If the "json serializer" variable is not set, then by default uses JSON.stringify and JSON.parse methods.
 
 ## Installation
 
